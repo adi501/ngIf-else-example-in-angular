@@ -1,0 +1,31 @@
+<h1>ngIf-else example in angular</h1>
+<B>Using If with Else</B>
+<div *ngIf="isValid; else templateName">
+  If isValid is true
+</div>
+<ng-template #templateName>
+  If isValid is false
+</ng-template>
+<br/>
+<B>Using If with Then</B>
+<div>
+<div *ngIf="isValid; then templateName1">
+  Here is never showing
+</div>
+<ng-template #templateName1>
+  If isValid is true
+</ng-template>
+</div>
+<br/>
+<B>Using If with Then and Else</B>
+<div>
+<div *ngIf="isValid; then thenTemplateName1 else elseTemplateName1">
+  Here is never showing
+</div>
+<ng-template #thenTemplateName1>
+  If isValid is true
+</ng-template>
+<ng-template #elseTemplateName1>
+  If isValid is false
+</ng-template>
+</div>
